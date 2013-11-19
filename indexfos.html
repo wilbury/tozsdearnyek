@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>main</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <script src="jquery-1.9.1.min.js"></script> 
+  <script src="jquery.mobile-1.3.2.min.js"></script>
+  <link href="jquery.mobile.structure-1.3.2.min.css" rel="stylesheet">
+        <link href="tozsdecss.min.css" rel="stylesheet"> 
+
+</head>
+<body>
+        <div data-role="page" id="page1">
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <h1>Főoldal</h1>
+                <a data-role="button" href="#page2" data-rel="page" data-icon="info" data-iconpos="notext"</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="a">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+            <div data-role="content">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#ecotv" data-rel="popup" data-mini="true" data-theme="b">Gazd. TV</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#calendar"  data-rel="dialog" data-mini="true" data-theme="b">Naptár</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#news"  data-rel="dialog" data-mini="true" data-theme="b">Hírek</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#dowjones"
+                        data-rel="popup" data-mini="true" data-theme="c">Dow Jones</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#nasdaq"
+                        data-rel="popup" data-mini="true" data-theme="c">Nasdaq</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#nikkei"
+                        data-rel="popup" data-mini="true" data-theme="c">NIKKEI</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#sp500"
+                        data-rel="popup" data-mini="true" data-theme="c">SP500</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#dax"
+                        data-rel="popup" data-mini="true" data-theme="c">DAX</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#ftse100"
+                        data-rel="popup" data-mini="true" data-theme="c">FTSE100</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#bux"
+                        data-rel="popup" data-mini="true" data-theme="c">BUX</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#gold"
+                        data-rel="popup" data-mini="true" data-theme="d">Arany</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#oil"
+                        data-rel="popup" data-mini="true" data-theme="d">Olaj</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#eurusd"
+                        data-rel="popup" data-mini="true" data-theme="a">EUR/USD</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#usdjpy"
+                        data-rel="popup" data-mini="true" data-theme="a">USD/JPY</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#usdchf"
+                        data-rel="popup" data-mini="true" data-theme="a">USD/CHF</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#gbpusd"
+                        data-rel="popup" data-mini="true" data-theme="a">GBP/USD</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#audusd"
+                        data-rel="popup" data-mini="true" data-theme="a">AUD/USD</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#nzdusd"
+                        data-rel="popup" data-mini="true" data-theme="a">NZD/USD</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#usdcad"
+                        data-rel="popup" data-mini="true" data-theme="a">USD/CAD</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#eurjpy"
+                        data-rel="popup" data-mini="true" data-theme="a">EUR/JPY</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#eurgbp"
+                        data-rel="popup" data-mini="true" data-theme="a">EUR/GBP</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#eurchf"
+                        data-rel="popup" data-mini="true" data-theme="a">EUR/CHF</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#usdsgd"
+                        data-rel="popup" data-mini="true" data-theme="a">USD/SGD</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#usdhkd"
+                        data-rel="popup" data-mini="true" data-theme="a">USD/HKD</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#corn"
+                        data-rel="popup" data-mini="true" data-theme="f">Kukorica</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#wheat"
+                        data-rel="popup" data-mini="true" data-theme="f">Búza</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#cotton"
+                        data-rel="popup" data-mini="true" data-theme="f">Gyapot</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#apple"
+                        data-rel="popup" data-mini="true" data-theme="e">Apple</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#facebook"
+                        data-rel="popup" data-mini="true" data-theme="e">Facebook</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a data-role="button" href="#jpmorgan"
+                        data-rel="popup" data-mini="true" data-theme="e">JP Morgan</a>
+                    </div>
+                </div>
+		<!-- dowjones popup -->
+		<div data-role="popup" id="dowjones" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=360&height=270&symbol=.DJI&duration=1&showLastClose=1&headerType=quote" alt="Dow Jones" />
+		</div>
+		<!-- nasdaq popup -->
+		<div data-role="popup" id="nasdaq" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=360&height=270&symbol=.IXIC&duration=1&showLastClose=1&headerType=quote">
+		</div>
+		<!-- nikkei popup -->
+		<div data-role="popup" id="nikkei" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=360&height=270&symbol=.N225&duration=1&showLastClose=1&headerType=quote.jpg">
+		</div>
+		<!-- sp500 popup -->
+		<div data-role="popup" id="sp500" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=360&height=250&symbol=.SPX&duration=1&showLastClose=1&headerType=quote.jpg">
+		</div>
+		<!-- dax popup -->
+		<div data-role="popup" id="dax" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=303&height=200&symbol=.GDAXI&duration=1&showLastClose=1&headerType=quote">
+		</div>
+		<!-- ftse100 popup -->
+		<div data-role="popup" id="ftse100" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=304&height=200&symbol=.FTSE&duration=1&showLastClose=1&headerType=quote">
+		</div>
+		<!-- bux popup -->
+		<div data-role="popup" id="bux" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&mno=2&rv=BUX1312" widht="100%" />
+		</div>
+		<!-- gold popup -->
+		<div data-role="popup" id="gold" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-left">Close</a>
+    <img src="http://www.kitco.com/images/live/gold.gif">
+		</div>
+		<!-- oil popup -->
+		<div data-role="popup" id="oil" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-left">Close</a>
+    <img src="http://www.finviz.com/fut_chart.ashx?t=CL&amp;p=m5&amp;s=m">
+		</div>
+		<!-- eurusd popup -->
+		<div data-role="popup" id="eurusd" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=EURUSD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- usdjpy popup -->
+		<div data-role="popup" id="usdjpy" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=USDJPY%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- usdchf popup -->
+		<div data-role="popup" id="usdchf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=USDCHF%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- gbpusd popup -->
+		<div data-role="popup" id="gbpusd" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=GBPUSD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- audusd popup -->
+		<div data-role="popup" id="audusd" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=AUDUSD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- nzdusd popup -->
+		<div data-role="popup" id="nzdusd" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=NZDUSD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- usdcad popup -->
+		<div data-role="popup" id="usdcad" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=USDCAD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- eurjpy popup -->
+		<div data-role="popup" id="eurjpy" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=EURJPY%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- eurgbp popup -->
+		<div data-role="popup" id="eurgbp" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=EURGBP%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- eurchf popup -->
+		<div data-role="popup" id="eurchf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=EURCHF%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- usdsgd popup -->
+		<div data-role="popup" id="usdsgd" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=USDSGD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- usdhkd popup -->
+		<div data-role="popup" id="usdhkd" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/t?s=USDHKD%3dX&lang=en-US&region=US&width=360&height=270.jpg">
+		</div>
+		<!-- corn popup -->
+		<div data-role="popup" id="corn" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-left">Close</a>
+    <img src="http://www.finviz.com/fut_chart.ashx?t=ZC&amp;p=m5&amp;s=m">
+		</div>
+		<!-- wheat popup -->
+		<div data-role="popup" id="wheat" data-overlay-theme="a" width="100%">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-left">Close</a>
+    <img src="http://www.finviz.com/fut_chart.ashx?t=ZW&amp;p=m5&amp;s=m">
+		</div>
+		<!-- cotton popup -->
+		<div data-role="popup" id="cotton" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-left">Close</a>
+    <img src="http://www.finviz.com/fut_chart.ashx?t=ZO&amp;p=m5&amp;s=m">
+		</div>
+		<!-- apple popup -->
+		<div data-role="popup" id="apple" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=400&height=270&symbol=AAPL.O&duration=5&showLastClose=1&headerType=quote">
+		</div>
+		<!-- facebook popup -->
+		<div data-role="popup" id="facebook" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=400&height=270&symbol=FB.O&duration=5&showLastClose=1&headerType=quote">
+		</div>
+		<!-- jpmorgan popup -->
+		<div data-role="popup" id="jpmorgan" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=400&height=270&symbol=JPM&duration=5&showLastClose=1&headerType=quote">
+		</div>
+		<!-- ecotv popup -->
+		<div data-role="popup" id="ecotv" data-theme="none">
+			<ul data-role="listview" data-theme="b">
+                <li><a href="#ducascopy" data-rel="dialog">Ducascopy TV</a></li>
+                <li><a href="#alpari" data-rel="dialog">Alpari TV</a></li>
+            </ul>
+		</div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <a data-role="button" href="#page2" data-rel="page" data-icon="alert"
+                data-theme="a" style="display: block; margin: 0 auto">Tudnivalók</a>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a data-role="button" target="_blank" href="http://tozsdearnyek.hu" data-icon="star"
+                         data-theme="a">tozsdearnyek.hu</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" target="_blank" href="http://appinvent.hu" data-icon="star"
+                         data-theme="a">appinvent.hu</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div> <!-- page1 vége popup -->
+		<div data-role="page" id="page2">
+            <div data-role="header" data-theme="a">
+                <h3>Forrás</h3>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="back" data-mini="true">Vissza</a>
+				<a data-role="button" href="#jogi" data-rel="popup" data-mini="true">Jogi nyilatkozat</a>
+            </div>
+            <div data-role="content">
+                <a data-role="button" target="_blank" href="http://portfolio.hu" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/portfolio.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://hvg.hu" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://img6.hvg.hu/static/skins/default/img/hvghulogo.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://portfoliofinancial.hu" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/portfoliofinancial.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://investing.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/investing.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://dukascopy.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/dukascopy.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://24hgold.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/24gold.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://kitco.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/kitco.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://finviz.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/finviz.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://finance.yahoo.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/yahoofinance.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://stooq.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/stooq.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://prorealtime.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/prorealtime.jpg" border="0"/>
+                </a>
+                <a data-role="button" target="_blank" href="http://www.reuters.com" data-rel="page"
+                data-theme="none" data-shadow="false">
+                <img src="http://www.tozsdearnyek.hu/images/linkek/reuters.jpg" border="0"/>
+                </a>
+            <!-- jogi popup -->
+		<div data-role="popup" id="jogi" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <p>Az applikációban elérhető adatok, információk tájékoztató jellegűek, nem tekinthetőek hiteles forrásnak. A programot mindenki saját felelősségére használja, a felhasználókat ért károkért az applikációt üzemeltetőkkel szemben semmilyen Jogi felelősség, és anyagi igény nem érvényesíthető. tozsdearnyek.hu & appinvent.hu </p>
+		</div>
+            </div>
+        </div> <!-- page2 vége popup -->
+       <div data-role="page" id="forexpage">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="a">
+                <h1>FOREX</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="a">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <img src="http://www.finviz.com/fx_image.ashx?eurusd.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?gbpusd.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?usdchf.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?usdjpy.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?audusd.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?nzdusd.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?usdcad.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?eurgbp.png&amp;rev=.jpg" width="48%">
+                    <img src="http://www.finviz.com/fx_image.ashx?gbpjpy.png&amp;rev=.jpg" width="48%">
+                <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="a">
+                    <h1>Forint diagramok</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>EUR/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=EURHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>CHF/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=CHFHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>GBP/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=GBPHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>JPY/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=JPYHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>CAD/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=CADHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>AUD/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=AUDHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>NZD/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=NZDHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>SGD/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=SGDHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>CNY/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=CNYHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>HKD/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=HKDHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>INR/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=INRHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>ARS/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=ARSHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>BRL/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=BRLHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>DKK/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=DKKHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>HRK/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=HRKHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>MXN/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=MXNHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>RON/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=RONHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>RUB/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=RUBHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>SEK/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=SEKHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>TRY/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=TRYHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>ZAR/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=ZARHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>PLN/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=PLNHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>CZK/HUF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=CZKHUF%3dX&amp;lang=en-US&amp;region=US" width="100%">
+                    </div>
+                </div>
+                <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="a">
+                    <h1>FOREX diagramok</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>EUR/USD</h1>
+                        <img src="http://mediaserver.fxstreet.com/images/chartgenerator.aspx?id=tts-3212168&amp;tspan=1D&amp;width=305&amp;height=180&amp;culture=en-US&amp;type=line" width="100%">
+                        <img src="http://mediaserver.fxstreet.com/images/chartgenerator.aspx?id=tts-3212168&amp;tspan=1M&amp;width=305&amp;height=180&amp;culture=en-US&amp;type=line" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>GBP/USD</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=GBPUSD%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://www.finviz.com/fx_image.ashx?gbpusd_d1_s.png" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/CHF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDCHF%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://www.finviz.com/fx_image.ashx?usdchf_d1_s.png" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/JPY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDJPY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://www.finviz.com/fx_image.ashx?usdjpy_d1_s.png" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>AUD/USD</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=AUDUSD%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://www.finviz.com/fx_image.ashx?audusd_d1_s.png" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>NZD/USD</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=NZDUSD%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://www.finviz.com/fx_image.ashx?nzdusd_d1_s.png" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>EUR/JPY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=EURJPY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://mediaserver.fxstreet.com/images/chartgenerator.aspx?id=tts-3212165&amp;tspan=3M&amp;width=305&amp;height=180&amp;culture=en-US&amp;type=line" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>EUR/GBP</h1>
+                        <img src="http://mediaserver.fxstreet.com/images/chartgenerator.aspx?id=tts-3212168&amp;tspan=1D&amp;width=305&amp;height=180&amp;culture=en-US&amp;type=line" width="100%">
+                        <img src="http://mediaserver.fxstreet.com/images/chartgenerator.aspx?id=tts-3212168&amp;tspan=1M&amp;width=305&amp;height=180&amp;culture=en-US&amp;type=line" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>EUR/CHF</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=EURCHF%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://rt2.it-finance.com/FXStreetStatic/fxstreet.cgi?w=616&amp;h=500&amp;ts=1440&amp;id=1931&amp;t=c&amp;n=30&amp;rsi_check=1&amp;rsi1=14&amp;ma_check=1&amp;ma1=200&amp;ma2=500&amp;ma3=1000"
+                        width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/HKD</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDHKD%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://rt2.it-finance.com/FXStreetStatic/fxstreet.cgi?w=616&amp;h=500&amp;ts=1440&amp;id=39821&amp;t=c&amp;n=30&amp;rsi_check=1&amp;rsi1=14&amp;ma_check=1&amp;ma1=200&amp;ma2=500&amp;ma3=1000"
+                        width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/SGD</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDSGD%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                        <img src="http://rt2.it-finance.com/FXStreetStatic/fxstreet.cgi?w=616&amp;h=500&amp;ts=1440&amp;id=25672&amp;t=c&amp;n=30&amp;rsi_check=1&amp;rsi1=14&amp;ma_check=1&amp;ma1=200&amp;ma2=500&amp;ma3=1000"
+                        width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/DKK</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDDKK%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/NOK</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDNOK%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/SEK</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDSEK%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/MXN</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDMXN%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/TRY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDTRY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>USD/ZAR</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=USDZAR%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>EUR/TRY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=EURTRY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>GBP/JPY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=GBPJPY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>AUD/JPY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=AUDJPY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="a">
+                        <h1>NZD/JPY</h1>
+                        <img src="http://chart.finance.yahoo.com/t?s=NZDJPY%3dX&amp;lang=en-US&amp;region=US&amp;width=240&amp;height=180.jpg" width="100%">
+                    </div>
+                </div>
+                <a data-role="button" href="#curcross" data-rel="dialog"
+                data-icon="gear" data-iconpos="bottom" data-mini="true" data-theme="a">Deviza keresztek</a>
+				<a data-role="button" href="#buysell" data-rel="dialog"
+                data-icon="gear" data-iconpos="bottom" data-mini="true" data-theme="a">Vétel / Eladás</a>
+            </div>
+        </div> <!-- forexpage vége -->
+        <div data-role="page" id="indexpage">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="c">
+                <h1>INDEXEK</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="c">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <img src="http://www.portfoliofinancial.hu/bux.php" width="48%">
+                    <img src="http://www.finviz.com/fut_image.ashx?ym.png" width="48%">
+                    <img src="http://www.finviz.com/fut_image.ashx?nq.png" width="48%">
+                    <img src="http://www.finviz.com/fut_image.ashx?es.png" width="48%">
+                    <img src="http://www.finviz.com/fut_image.ashx?nkd.png" width="48%">
+                    <img src="http://www.finviz.com/fut_image.ashx?er2.png" width="48%">
+               <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>BUX</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#buxreal"
+                        data-rel="popup" data-mini="true" data-theme="c">BUX Realtime</a>
+                        <a data-role="button" href="#bux30"
+                        data-rel="popup" data-mini="true" data-theme="c">BUX 30 nap</a>
+                        <a data-role="button" href="#buxyear"
+                        data-rel="popup" data-mini="true" data-theme="c">BUX 1 év</a>
+                        <a data-role="button" href="#bux10year"
+                        data-rel="popup" data-mini="true" data-theme="c">BUX 10 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>Dow Jones</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#dowjonesreal"
+                        data-rel="popup" data-mini="true" data-theme="c">DJ Realtime</a>
+                        <a data-role="button" href="#dowjones30"
+                        data-rel="popup" data-mini="true" data-theme="c">DJ 30 nap</a>
+                        <a data-role="button" href="#dowjonesyear"
+                        data-rel="popup" data-mini="true" data-theme="c">DJ 1 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>NASDAQ</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#nasdaqreal"
+                        data-rel="popup" data-mini="true" data-theme="c">NASDAQ Realtime</a>
+                        <a data-role="button" href="#nasdaq30"
+                        data-rel="popup" data-mini="true" data-theme="c">NASDAQ 30 nap</a>
+                        <a data-role="button" href="#nasdaqyear"
+                        data-rel="popup" data-mini="true" data-theme="c">NASDAQ 1 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>SP 500</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#sp500real"
+                        data-rel="popup" data-mini="true" data-theme="c">SP 500 Realtime</a>
+                        <a data-role="button" href="#sp50030"
+                        data-rel="popup" data-mini="true" data-theme="c">SP 500 30 nap</a>
+                        <a data-role="button" href="#sp500year"
+                        data-rel="popup" data-mini="true" data-theme="c">SP 500 1 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>NIKKEI</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#nikkeireal"
+                        data-rel="popup" data-mini="true" data-theme="c">NIKKEI Realtime</a>
+                        <a data-role="button" href="#nikkei30"
+                        data-rel="popup" data-mini="true" data-theme="c">NIKKEI 30 nap</a>
+                        <a data-role="button" href="#nikkeiyear"
+                        data-rel="popup" data-mini="true" data-theme="c">NIKKEI 1 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>FTSE100</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#ftsereal"
+                        data-rel="popup" data-mini="true" data-theme="c">FTSE100 Realtime</a>
+                        <a data-role="button" href="#ftse30"
+                        data-rel="popup" data-mini="true" data-theme="c">FTSE100 30 nap</a>
+                        <a data-role="button" href="#ftseyear"
+                        data-rel="popup" data-mini="true" data-theme="c">FTSE100 1 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>DAX</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#daxreal"
+                        data-rel="popup" data-mini="true" data-theme="c">DAX Realtime</a>
+                        <a data-role="button" href="#dax30"
+                        data-rel="popup" data-mini="true" data-theme="c">DAX 30 nap</a>
+                        <a data-role="button" href="#daxyear"
+                        data-rel="popup" data-mini="true" data-theme="c">DAX 1 év</a>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="c">
+                    <h1>CAC40</h1>
+                    <div data-role="controlgroup">
+                        <a data-role="button" href="#cacreal"
+                        data-rel="popup" data-mini="true" data-theme="c">CAC40 Realtime</a>
+                        <a data-role="button" href="#cac30"
+                        data-rel="popup" data-mini="true" data-theme="c">CAC40 30 nap</a>
+                        <a data-role="button" href="#cacyear"
+                        data-rel="popup" data-mini="true" data-theme="c">CAC40 1 év</a>
+                    </div>
+                </div>
+		<!-- dowjonesreal popup -->
+		<div data-role="popup" id="dowjonesreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=480&height=360&symbol=.DJI&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dowjones30 popup -->
+		<div data-role="popup" id="dowjones30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.DJI&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dowjonesyear popup -->
+		<div data-role="popup" id="dowjonesyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.DJI&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- buxreal popup -->
+		<div data-role="popup" id="buxreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-left">Close</a>
+    <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&mno=2&rv=BUX1312" />
+		</div>
+		<!-- buxyear popup -->
+		<div data-role="popup" id="buxyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://stooq.com/c/?s=^bux&c=1y&t=l&a=ln&b" />
+		</div>
+		<!-- bux10year popup -->
+		<div data-role="popup" id="bux10year" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://stooq.com/c/?s=^bux&c=10y&t=l&a=ln&b" />
+		</div>
+		<!-- bux30 popup -->
+		<div data-role="popup" id="bux30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://stooq.com/c/?s=^bux&c=1m&t=l&a=ln&b" />
+		</div>
+		<!-- nasdaqreal popup -->
+		<div data-role="popup" id="nasdaqreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.IXIC&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- nasdaq30 popup -->
+		<div data-role="popup" id="nasdaq30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.IXIC&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- nasdaqyear popup -->
+		<div data-role="popup" id="nasdaqyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.IXIC&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- sp500real popup -->
+		<div data-role="popup" id="sp500real" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.SPX&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- sp50030 popup -->
+		<div data-role="popup" id="sp50030" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.SPX&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- sp500year popup -->
+		<div data-role="popup" id="sp500year" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=412&height=240&symbol=.SPX&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- nikkeireal popup -->
+		<div data-role="popup" id="nikkeireal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://www.reuters.wallst.com/enhancements/chartapi/index_chart_api.asp?symbol=.N225&headerType=quote&width=540&height=249&duration=1" />
+		</div>
+		<!-- nikkei30 popup -->
+		<div data-role="popup" id="nikkei30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://www.reuters.wallst.com/enhancements/chartapi/index_chart_api.asp?symbol=.N225&headerType=quote&width=540&height=249&duration=30" />
+		</div>
+		<!-- nikkeiyear popup -->
+		<div data-role="popup" id="nikkeiyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://www.reuters.wallst.com/enhancements/chartapi/index_chart_api.asp?symbol=.N225&headerType=quote&width=540&height=249&duration=365" />
+		</div>
+		<!-- ftsereal popup -->
+		<div data-role="popup" id="ftsereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.FTSE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- ftse30 popup -->
+		<div data-role="popup" id="ftse30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.FTSE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- ftseyear popup -->
+		<div data-role="popup" id="ftseyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.FTSE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- daxreal popup -->
+		<div data-role="popup" id="daxreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.GDAXI&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dax30 popup -->
+		<div data-role="popup" id="dax30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.GDAXI&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- daxyear popup -->
+		<div data-role="popup" id="daxyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.GDAXI&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- cacreal popup -->
+		<div data-role="popup" id="cacreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.FCHI&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- cac30 popup -->
+		<div data-role="popup" id="cac30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.FCHI&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- cacyear popup -->
+		<div data-role="popup" id="cacyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=531&height=273&symbol=.FCHI&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+            </div>
+        </div> <!-- indexpage vége -->
+        <div data-role="page" id="stockpage" data-theme="a">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="e">
+                <h1>Részvények</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="e">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="e">
+                    <h1>BÉT</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>OTP</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=OTP"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>MOL</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=MOL"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Richter</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=RICHTER"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>MTelekom</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=MTELEKOM"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>EGIS</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=EGIS"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>CIGPANNONIA</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=CIGPANNONIA"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>FHB</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=FHB"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>E-STAR</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=E-STAR"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>PANNERGY</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=PANNERGY"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>ESTMEDIA</h1>
+                        <img src="http://www.portfolio.hu/tozsde/graf.php?pageno=1&amp;mno=2&amp;rv=ESTMEDIA"
+                        style="display: block; margin: 0 auto" width="100%">
+                    </div>
+                </div>
+                <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="e">
+                    <h1>USA</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>APPLE</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#applereal"
+                        data-rel="popup" data-mini="true" data-theme="e">APPLE realtime</a>
+                            <a data-role="button" href="#apple30"
+                        data-rel="popup" data-mini="true" data-theme="e">APPLE 30 nap</a>
+                            <a data-role="button" href="#appleyear"
+                        data-rel="popup" data-mini="true" data-theme="e">APPLE 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>FACEBOOK</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#fbreal"
+                        data-rel="popup" data-mini="true" data-theme="e">FACEBOOK realtime</a>
+                            <a data-role="button" href="#fb30"
+                        data-rel="popup" data-mini="true" data-theme="e">FACEBOOK 30 nap</a>
+                            <a data-role="button" href="#fbyear"
+                        data-rel="popup" data-mini="true" data-theme="e">FACEBOOK 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>GOOGLE</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#googlereal"
+                        data-rel="popup" data-mini="true" data-theme="e">GOOGLE realtime</a>
+                            <a data-role="button" href="#google30"
+                        data-rel="popup" data-mini="true" data-theme="e">GOOGLE 30 nap</a>
+                            <a data-role="button" href="#googleyear"
+                        data-rel="popup" data-mini="true" data-theme="e">GOOGLE 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>American Express</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#amexpreal"
+                        data-rel="popup" data-mini="true" data-theme="e">American Express realtime</a>
+                            <a data-role="button" href="#amexp30"
+                        data-rel="popup" data-mini="true" data-theme="e">American Express 30 nap</a>
+                            <a data-role="button" href="#amexpyear"
+                        data-rel="popup" data-mini="true" data-theme="e">American Express 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>BOEING</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#boeingreal"
+                        data-rel="popup" data-mini="true" data-theme="e">BOEING realtime</a>
+                            <a data-role="button" href="#boeing30"
+                        data-rel="popup" data-mini="true" data-theme="e">BOEING 30 nap</a>
+                            <a data-role="button" href="#boeingyear"
+                        data-rel="popup" data-mini="true" data-theme="e">BOEING 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>CATERPILLAR</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#caterpreal"
+                        data-rel="popup" data-mini="true" data-theme="e">CATERPILLAR realtime</a>
+                            <a data-role="button" href="#caterp30"
+                        data-rel="popup" data-mini="true" data-theme="e">CATERPILLAR 30 nap</a>
+                            <a data-role="button" href="#caterpyear"
+                        data-rel="popup" data-mini="true" data-theme="e">CATERPILLAR 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>CHEVRON</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#chevronreal"
+                        data-rel="popup" data-mini="true" data-theme="e">CHEVRON realtime</a>
+                            <a data-role="button" href="#chevron30"
+                        data-rel="popup" data-mini="true" data-theme="e">CHEVRON 30 nap</a>
+                            <a data-role="button" href="#chevronyear"
+                        data-rel="popup" data-mini="true" data-theme="e">CHEVRON 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>CISCO</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#ciscoreal"
+                        data-rel="popup" data-mini="true" data-theme="e">CISCO realtime</a>
+                            <a data-role="button" href="#cisco30"
+                        data-rel="popup" data-mini="true" data-theme="e">CISCO 30 nap</a>
+                            <a data-role="button" href="#ciscoyear"
+                        data-rel="popup" data-mini="true" data-theme="e">CISCO 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>DELL</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#dellreal"
+                        data-rel="popup" data-mini="true" data-theme="e">DELL realtime</a>
+                            <a data-role="button" href="#dell30"
+                        data-rel="popup" data-mini="true" data-theme="e">DELL 30 nap</a>
+                            <a data-role="button" href="#dellyear"
+                        data-rel="popup" data-mini="true" data-theme="e">DELL 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>EXXON Mobil</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#exxonreal"
+                        data-rel="popup" data-mini="true" data-theme="e">EXXON Mobil realtime</a>
+                            <a data-role="button" href="#exxon30"
+                        data-rel="popup" data-mini="true" data-theme="e">EXXON Mobil 30 nap</a>
+                            <a data-role="button" href="#exxonyear"
+                        data-rel="popup" data-mini="true" data-theme="e">EXXON Mobil 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>G.E.</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#gereal"
+                        data-rel="popup" data-mini="true" data-theme="e">G.E. realtime</a>
+                            <a data-role="button" href="#ge30"
+                        data-rel="popup" data-mini="true" data-theme="e">G.E. 30 nap</a>
+                            <a data-role="button" href="#geyear"
+                        data-rel="popup" data-mini="true" data-theme="e">G.E. 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>GOLDMAN SACHS</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#goldmanreal"
+                        data-rel="popup" data-mini="true" data-theme="e">GOLDMAN SACHS realtime</a>
+                            <a data-role="button" href="#goldman30"
+                        data-rel="popup" data-mini="true" data-theme="e">GOLDMAN SACHS 30 nap</a>
+                            <a data-role="button" href="#goldmanyear"
+                        data-rel="popup" data-mini="true" data-theme="e">GOLDMAN SACHS 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>INTEL</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#intelreal"
+                        data-rel="popup" data-mini="true" data-theme="e">INTEL realtime</a>
+                            <a data-role="button" href="#intel30"
+                        data-rel="popup" data-mini="true" data-theme="e">INTEL 30 nap</a>
+                            <a data-role="button" href="#intelyear"
+                        data-rel="popup" data-mini="true" data-theme="e">INTEL 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Johnson &amp; Johnson</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#jjreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Johnson &amp; Johnson realtime</a>
+                            <a data-role="button" href="#jj30"
+                        data-rel="popup" data-mini="true" data-theme="e">Johnson &amp; Johnson 30 nap</a>
+                            <a data-role="button" href="#jjyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Johnson &amp; Johnson 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>JP Morgan</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#jpmorganreal"
+                        data-rel="popup" data-mini="true" data-theme="e">JP Morgan realtime</a>
+                            <a data-role="button" href="#jpmorgan30"
+                        data-rel="popup" data-mini="true" data-theme="e">JP Morgan 30 nap</a>
+                            <a data-role="button" href="#jpmorganyear"
+                        data-rel="popup" data-mini="true" data-theme="e">JP Morgan 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>McDonald's</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#mcdonaldsreal"
+                        data-rel="popup" data-mini="true" data-theme="e">McDonald's realtime</a>
+                            <a data-role="button" href="#mcdonalds30"
+                        data-rel="popup" data-mini="true" data-theme="e">McDonald's 30 nap</a>
+                            <a data-role="button" href="#mcdonaldsyear"
+                        data-rel="popup" data-mini="true" data-theme="e">McDonald's 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>MERCK</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#merckreal"
+                        data-rel="popup" data-mini="true" data-theme="e">MERCK realtime</a>
+                            <a data-role="button" href="#merck30"
+                        data-rel="popup" data-mini="true" data-theme="e">MERCK 30 nap</a>
+                            <a data-role="button" href="#merckyear"
+                        data-rel="popup" data-mini="true" data-theme="e">MERCK 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>MICROSOFT</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#microsoftreal"
+                        data-rel="popup" data-mini="true" data-theme="e">MICROSOFT realtime</a>
+                            <a data-role="button" href="#microsoft30"
+                        data-rel="popup" data-mini="true" data-theme="e">MICROSOFT 30 nap</a>
+                            <a data-role="button" href="#microsoftyear"
+                        data-rel="popup" data-mini="true" data-theme="e">MICROSOFT 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Procter &amp; Gamble</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#procterreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Procter &amp; Gamble realtime</a>
+                            <a data-role="button" href="#procter30"
+                        data-rel="popup" data-mini="true" data-theme="e">Procter &amp; Gamble 30 nap</a>
+                            <a data-role="button" href="#procteryear"
+                        data-rel="popup" data-mini="true" data-theme="e">Procter &amp; Gamble 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>COCA-COLA</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#cokereal"
+                        data-rel="popup" data-mini="true" data-theme="e">COCA-COLA realtime</a>
+                            <a data-role="button" href="#coke30"
+                        data-rel="popup" data-mini="true" data-theme="e">COCA-COLA 30 nap</a>
+                            <a data-role="button" href="#cokeyear"
+                        data-rel="popup" data-mini="true" data-theme="e">COCA-COLA 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>VISA</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#visareal"
+                        data-rel="popup" data-mini="true" data-theme="e">VISA realtime</a>
+                            <a data-role="button" href="#visa30"
+                        data-rel="popup" data-mini="true" data-theme="e">VISA 30 nap</a>
+                            <a data-role="button" href="#visayear"
+                        data-rel="popup" data-mini="true" data-theme="e">VISA 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>WAL-MART</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#walmartreal"
+                        data-rel="popup" data-mini="true" data-theme="e">WAL-MART realtime</a>
+                            <a data-role="button" href="#walmart30"
+                        data-rel="popup" data-mini="true" data-theme="e">WAL-MART 30 nap</a>
+                            <a data-role="button" href="#walmartyear"
+                        data-rel="popup" data-mini="true" data-theme="e">WAL-MART 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>YAHOO</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#yahooreal"
+                        data-rel="popup" data-mini="true" data-theme="e">YAHOO realtime</a>
+                            <a data-role="button" href="#yahoo30"
+                        data-rel="popup" data-mini="true" data-theme="e">YAHOO 30 nap</a>
+                            <a data-role="button" href="#yahooyear"
+                        data-rel="popup" data-mini="true" data-theme="e">YAHOO 1 év</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="e">
+                    <h1>DAX</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>ALLIANZ</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#allianzreal"
+                        data-rel="popup" data-mini="true" data-theme="e">ALLIANZ realtime</a>
+                            <a data-role="button" href="#allianz30"
+                        data-rel="popup" data-mini="true" data-theme="e">ALLIANZ 30 nap</a>
+                            <a data-role="button" href="#allianzyear"
+                        data-rel="popup" data-mini="true" data-theme="e">ALLIANZ 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Bayer</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#bayerreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Bayer realtime</a>
+                            <a data-role="button" href="#bayer30"
+                        data-rel="popup" data-mini="true" data-theme="e">Bayer 30 nap</a>
+                            <a data-role="button" href="#bayeryear"
+                        data-rel="popup" data-mini="true" data-theme="e">Bayer 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>COMMERZBANK</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#commerzreal"
+                        data-rel="popup" data-mini="true" data-theme="e">COMMERZBANK realtime</a>
+                            <a data-role="button" href="#commerz30"
+                        data-rel="popup" data-mini="true" data-theme="e">COMMERZBANK 30 nap</a>
+                            <a data-role="button" href="#commerzyear"
+                        data-rel="popup" data-mini="true" data-theme="e">COMMERZBANK 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Daimler</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#daimlerreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Daimler realtime</a>
+                            <a data-role="button" href="#daimler30"
+                        data-rel="popup" data-mini="true" data-theme="e">Daimler 30 nap</a>
+                            <a data-role="button" href="#daimleryear"
+                        data-rel="popup" data-mini="true" data-theme="e">Daimler 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Deutsche Bank</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#dbankreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Bank realtime</a>
+                            <a data-role="button" href="#dbank30"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Bank 30 nap</a>
+                            <a data-role="button" href="#dbankyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Bank 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Deutsche Lufthansa</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#dluftreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Lufthansa realtime</a>
+                            <a data-role="button" href="#dluft30"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Lufthansa 30 nap</a>
+                            <a data-role="button" href="#dluftyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Lufthansa 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Deutsche Telekom</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#dtelekomreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Telekom realtime</a>
+                            <a data-role="button" href="#dtelekom30"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Telekom 30 nap</a>
+                            <a data-role="button" href="#dtelekomyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Deutsche Telekom 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>E.ON</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#eonreal"
+                        data-rel="popup" data-mini="true" data-theme="e">E.ON realtime</a>
+                            <a data-role="button" href="#eon30"
+                        data-rel="popup" data-mini="true" data-theme="e">E.ON 30 nap</a>
+                            <a data-role="button" href="#eonyear"
+                        data-rel="popup" data-mini="true" data-theme="e">E.ON 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>RWE</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#rwereal"
+                        data-rel="popup" data-mini="true" data-theme="e">RWE realtime</a>
+                            <a data-role="button" href="#rwe30"
+                        data-rel="popup" data-mini="true" data-theme="e">RWE 30 nap</a>
+                            <a data-role="button" href="#rweyear"
+                        data-rel="popup" data-mini="true" data-theme="e">RWE 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>SAP</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#sapreal"
+                        data-rel="popup" data-mini="true" data-theme="e">SAP realtime</a>
+                            <a data-role="button" href="#sap30"
+                        data-rel="popup" data-mini="true" data-theme="e">SAP 30 nap</a>
+                            <a data-role="button" href="#sapyear"
+                        data-rel="popup" data-mini="true" data-theme="e">SAP 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Siemens</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#siemensreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Siemens realtime</a>
+                            <a data-role="button" href="#siemens30"
+                        data-rel="popup" data-mini="true" data-theme="e">Siemens 30 nap</a>
+                            <a data-role="button" href="#siemensyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Siemens 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Thyssenkrupp</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#thyssenreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Thyssenkrupp realtime</a>
+                            <a data-role="button" href="#thyssen30"
+                        data-rel="popup" data-mini="true" data-theme="e">Thyssenkrupp 30 nap</a>
+                            <a data-role="button" href="#thyssenyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Thyssenkrupp 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Volkswagen</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#vwreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Volkswagen realtime</a>
+                            <a data-role="button" href="#vw30"
+                        data-rel="popup" data-mini="true" data-theme="e">Volkswagen 30 nap</a>
+                            <a data-role="button" href="#vwyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Volkswagen 1 év</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="e">
+                    <h1>FTSE100</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>AVIVA</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#avivareal"
+                        data-rel="popup" data-mini="true" data-theme="e">AVIVA realtime</a>
+                            <a data-role="button" href="#aviva30"
+                        data-rel="popup" data-mini="true" data-theme="e">AVIVA 30 nap</a>
+                            <a data-role="button" href="#avivayear"
+                        data-rel="popup" data-mini="true" data-theme="e">AVIVA 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>British American Tobacco</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#batreal"
+                        data-rel="popup" data-mini="true" data-theme="e">BAT realtime</a>
+                            <a data-role="button" href="#bat30"
+                        data-rel="popup" data-mini="true" data-theme="e">BAT 30 nap</a>
+                            <a data-role="button" href="#batyear"
+                        data-rel="popup" data-mini="true" data-theme="e">BAT 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>GlaxoSmithKline</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#glaxoreal"
+                        data-rel="popup" data-mini="true" data-theme="e">GlaxoSmithKline realtime</a>
+                            <a data-role="button" href="#glaxo30"
+                        data-rel="popup" data-mini="true" data-theme="e">GlaxoSmithKline 30 nap</a>
+                            <a data-role="button" href="#glaxoyear"
+                        data-rel="popup" data-mini="true" data-theme="e">GlaxoSmithKline 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>HSBC</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#hsbcreal"
+                        data-rel="popup" data-mini="true" data-theme="e">HSBC realtime</a>
+                            <a data-role="button" href="#hsbc30"
+                        data-rel="popup" data-mini="true" data-theme="e">HSBC 30 nap</a>
+                            <a data-role="button" href="#hsbcyear"
+                        data-rel="popup" data-mini="true" data-theme="e">HSBC 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>KINGFISHER</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#kingreal"
+                        data-rel="popup" data-mini="true" data-theme="e">KINGFISHER realtime</a>
+                            <a data-role="button" href="#king30"
+                        data-rel="popup" data-mini="true" data-theme="e">KINGFISHER 30 nap</a>
+                            <a data-role="button" href="#kingyear"
+                        data-rel="popup" data-mini="true" data-theme="e">KINGFISHER 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Lloyds Banking Group</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#lloydsreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Lloyds B.G. realtime</a>
+                            <a data-role="button" href="#lloyds30"
+                        data-rel="popup" data-mini="true" data-theme="e">Lloyds B.G. 30 nap</a>
+                            <a data-role="button" href="#lloydsyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Lloyds B.G. 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Rio Tinto</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#riotintoreal"
+                        data-rel="popup" data-mini="true" data-theme="e">Rio Tinto realtime</a>
+                            <a data-role="button" href="#riotinto30"
+                        data-rel="popup" data-mini="true" data-theme="e">Rio Tinto 30 nap</a>
+                            <a data-role="button" href="#riotintoyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Rio Tinto 1 év</a>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Vodafone</h1>
+                        <div data-role="controlgroup">
+                            <a data-role="button" href="#vodafonereal"
+                        data-rel="popup" data-mini="true" data-theme="e">Vodafone realtime</a>
+                            <a data-role="button" href="#vodafone30"
+                        data-rel="popup" data-mini="true" data-theme="e">Vodafone 30 nap</a>
+                            <a data-role="button" href="#vodafoneyear"
+                        data-rel="popup" data-mini="true" data-theme="e">Vodafone 1 év</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="collapsible" data-iconpos="bottom" data-mini="true" data-theme="e">
+                    <h1>CAC40</h1>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Alstom</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=ALSO.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>AXA</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=AXAF.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>BNP Paribas</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=BNPP.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Carrefour</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=CARR.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Credit Agricole</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=CAGR.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>GDF Suez</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=GSZ.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>ORANGE</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=ORAN.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Sanofi</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=SASY.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Societe Generale</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=SOGN.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                    <div data-role="collapsible" data-mini="true" data-theme="e">
+                        <h1>Vivendi</h1>
+                        <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=458&amp;height=292&amp;symbol=VIV.PA&amp;duration=5&amp;lowers=volume&amp;headertype=yes"
+                        width="100%" style="display: block; margin: 0 auto">
+                    </div>
+                </div>
+		<!-- applereal popup -->
+		<div data-role="popup" id="applereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AAPL.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- apple30 popup -->
+		<div data-role="popup" id="apple30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AAPL.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- appleyear popup -->
+		<div data-role="popup" id="appleyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AAPL.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- fbreal popup -->
+		<div data-role="popup" id="fbreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=FB.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- fb30 popup -->
+		<div data-role="popup" id="fb30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=FB.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- fbyear popup -->
+		<div data-role="popup" id="fbyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=FB.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- googlereal popup -->
+		<div data-role="popup" id="googlereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GOOG.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- google30 popup -->
+		<div data-role="popup" id="google30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GOOG.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- googleyear popup -->
+		<div data-role="popup" id="googleyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GOOG.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- amexpreal popup -->
+		<div data-role="popup" id="amexpreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AXP.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- amexp30 popup -->
+		<div data-role="popup" id="amexp30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AXP.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- amexpyear popup -->
+		<div data-role="popup" id="amexpyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AXP.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- boeingreal popup -->
+		<div data-role="popup" id="boeingreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BA.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- boeing30 popup -->
+		<div data-role="popup" id="boeing30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BA.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- boeingyear popup -->
+		<div data-role="popup" id="boeingyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BA.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- caterpreal popup -->
+		<div data-role="popup" id="caterpreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CAT.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- caterp30 popup -->
+		<div data-role="popup" id="caterp30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CAT.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- caterpyear popup -->
+		<div data-role="popup" id="caterpyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CAT.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- chevronreal popup -->
+		<div data-role="popup" id="chevronreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CVX.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- chevron30 popup -->
+		<div data-role="popup" id="chevron30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CVX.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- chevronyear popup -->
+		<div data-role="popup" id="chevronyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CVX.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- ciscoreal popup -->
+		<div data-role="popup" id="ciscoreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CSCO.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- cisco30 popup -->
+		<div data-role="popup" id="cisco30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CSCO.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- ciscoyear popup -->
+		<div data-role="popup" id="ciscoyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CSCO.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dellreal popup -->
+		<div data-role="popup" id="dellreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DELL.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dell30 popup -->
+		<div data-role="popup" id="dell30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DELL.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dellyear popup -->
+		<div data-role="popup" id="dellyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DELL.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- exxonreal popup -->
+		<div data-role="popup" id="exxonreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=XOM.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- exxon30 popup -->
+		<div data-role="popup" id="exxon30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=XOM.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- exxonyear popup -->
+		<div data-role="popup" id="exxonyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=XOM.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- gereal popup -->
+		<div data-role="popup" id="gereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GE.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- ge30 popup -->
+		<div data-role="popup" id="ge30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GE.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- geyear popup -->
+		<div data-role="popup" id="geyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GE.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- goldmanreal popup -->
+		<div data-role="popup" id="goldmanreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GS.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- goldman30 popup -->
+		<div data-role="popup" id="goldman30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GS.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- goldmanyear popup -->
+		<div data-role="popup" id="goldmanyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GS.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- intelreal popup -->
+		<div data-role="popup" id="intelreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=INTC.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- intel30 popup -->
+		<div data-role="popup" id="intel30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=INTC.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- intelyear popup -->
+		<div data-role="popup" id="intelyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=INTC.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- jjreal popup -->
+		<div data-role="popup" id="jjreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=JNJ.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- jj30 popup -->
+		<div data-role="popup" id="jj30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=JNJ.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- jjyear popup -->
+		<div data-role="popup" id="jjyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=JNJ.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- jpmorganreal popup -->
+		<div data-role="popup" id="jpmorganreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=JPM.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- jpmorgan30 popup -->
+		<div data-role="popup" id="jpmorgan30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=JPM.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- jpmorganyear popup -->
+		<div data-role="popup" id="jpmorganyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=JPM.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- mcdonaldsreal popup -->
+		<div data-role="popup" id="mcdonaldsreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MCD.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- mcdonalds30 popup -->
+		<div data-role="popup" id="mcdonalds30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MCD.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- mcdonaldsyear popup -->
+		<div data-role="popup" id="mcdonaldsyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MCD.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- merckreal popup -->
+		<div data-role="popup" id="merckreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MRK.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- merck30 popup -->
+		<div data-role="popup" id="merck30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MRK.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- merckyear popup -->
+		<div data-role="popup" id="merckyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MRK.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- microsoftreal popup -->
+		<div data-role="popup" id="microsoftreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MSFT.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- microsoft30 popup -->
+		<div data-role="popup" id="microsoft30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MSFT.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- microsoftyear popup -->
+		<div data-role="popup" id="microsoftyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=MSFT.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- procterreal popup -->
+		<div data-role="popup" id="procterreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=PG.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- procter30 popup -->
+		<div data-role="popup" id="procter30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=PG.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- procteryear popup -->
+		<div data-role="popup" id="procteryear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=PG.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- cokereal popup -->
+		<div data-role="popup" id="cokereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CCE.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- coke30 popup -->
+		<div data-role="popup" id="coke30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CCE.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- cokeyear popup -->
+		<div data-role="popup" id="cokeyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CCE.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- visareal popup -->
+		<div data-role="popup" id="visareal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=V.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- visa30 popup -->
+		<div data-role="popup" id="visa30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=V.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- visayear popup -->
+		<div data-role="popup" id="visayear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=V.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- walmartreal popup -->
+		<div data-role="popup" id="walmartreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=WMT.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- walmart30 popup -->
+		<div data-role="popup" id="walmart30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=WMT.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- walmartyear popup -->
+		<div data-role="popup" id="walmartyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=WMT.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- yahooreal popup -->
+		<div data-role="popup" id="yahooreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=YHOO.O&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- yahoo30 popup -->
+		<div data-role="popup" id="yahoo30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=YHOO.O&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- yahooyear popup -->
+		<div data-role="popup" id="yahooyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=YHOO.O&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- allianzreal popup -->
+		<div data-role="popup" id="allianzreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=ALVG.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- allianz30 popup -->
+		<div data-role="popup" id="allianz30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=ALVG.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- allianzyear popup -->
+		<div data-role="popup" id="allianzyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=ALVG.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- bayerreal popup -->
+		<div data-role="popup" id="bayerreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BAYGn.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- bayer30 popup -->
+		<div data-role="popup" id="bayer30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BAYGn.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- bayeryear popup -->
+		<div data-role="popup" id="bayeryear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BAYGn.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- commerzreal popup -->
+		<div data-role="popup" id="commerzreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CBKG.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- commerz30 popup -->
+		<div data-role="popup" id="commerz30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CBKG.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- commerzyear popup -->
+		<div data-role="popup" id="commerzyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=CBKG.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- daimlerreal popup -->
+		<div data-role="popup" id="daimlerreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DAIGn.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- daimler30 popup -->
+		<div data-role="popup" id="daimler30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DAIGn.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- daimleryear popup -->
+		<div data-role="popup" id="daimleryear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DAIGn.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dbankreal popup -->
+		<div data-role="popup" id="dbankreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DB.N&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dbank30 popup -->
+		<div data-role="popup" id="dbank30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DB.N&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dbankyear popup -->
+		<div data-role="popup" id="dbankyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DB.N&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dluftreal popup -->
+		<div data-role="popup" id="dluftreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=LHAG.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dluft30 popup -->
+		<div data-role="popup" id="dluft30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=LHAG.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dluftyear popup -->
+		<div data-role="popup" id="dluftyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=LHAG.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dtelekomreal popup -->
+		<div data-role="popup" id="dtelekomreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DTEGn.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dtelekom30 popup -->
+		<div data-role="popup" id="dtelekom30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DTEGn.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- dtelekomyear popup -->
+		<div data-role="popup" id="dtelekomyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=DTEGn.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- eonreal popup -->
+		<div data-role="popup" id="eonreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=EONGn.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- eon30 popup -->
+		<div data-role="popup" id="eon30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=EONGn.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- eonyear popup -->
+		<div data-role="popup" id="eonyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=EONGn.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- rwereal popup -->
+		<div data-role="popup" id="rwereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=RWEG.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- rwe30 popup -->
+		<div data-role="popup" id="rwe30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=RWEG.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- rweyear popup -->
+		<div data-role="popup" id="rweyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=RWEG.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- sapreal popup -->
+		<div data-role="popup" id="sapreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=SAPG.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- sap30 popup -->
+		<div data-role="popup" id="sap30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=SAPG.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- sapyear popup -->
+		<div data-role="popup" id="sapyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=SAPG.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- siemensreal popup -->
+		<div data-role="popup" id="siemensreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=SIEGn.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- siemens30 popup -->
+		<div data-role="popup" id="siemens30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=SIEGn.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- siemenyear popup -->
+		<div data-role="popup" id="siemensyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=SIEGn.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- thyssenreal popup -->
+		<div data-role="popup" id="thyssenreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=TKAG.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- thyssen30 popup -->
+		<div data-role="popup" id="thyssen30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=TKAG.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- thyssenyear popup -->
+		<div data-role="popup" id="thyssenyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=TKAG.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- vwreal popup -->
+		<div data-role="popup" id="vwreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=VOWG_p.DE&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- vw30 popup -->
+		<div data-role="popup" id="vw30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=VOWG_p.DE&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- vwyear popup -->
+		<div data-role="popup" id="vwyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=VOWG_p.DE&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- avivareal popup -->
+		<div data-role="popup" id="avivareal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AV.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- aviva30 popup -->
+		<div data-role="popup" id="aviva30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AV.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- avivayear popup -->
+		<div data-role="popup" id="avivayear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=AV.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- batreal popup -->
+		<div data-role="popup" id="batreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BATS.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- bat30 popup -->
+		<div data-role="popup" id="bat30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BATS.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- batyear popup -->
+		<div data-role="popup" id="batyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=BATS.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- glaxoreal popup -->
+		<div data-role="popup" id="glaxoreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GSK.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- glaxo30 popup -->
+		<div data-role="popup" id="glaxo30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GSK.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- glaxoyear popup -->
+		<div data-role="popup" id="glaxoyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=GSK.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- hsbcreal popup -->
+		<div data-role="popup" id="hsbcreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=H50E.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- hsbc30 popup -->
+		<div data-role="popup" id="hsbc30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=H50E.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- hsbcyear popup -->
+		<div data-role="popup" id="hsbcyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=H50E.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- kingreal popup -->
+		<div data-role="popup" id="kingreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=KGF.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- king30 popup -->
+		<div data-role="popup" id="king30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=KGF.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- kingyear popup -->
+		<div data-role="popup" id="kingyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=KGF.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- lloydsreal popup -->
+		<div data-role="popup" id="lloydsreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=LLOY.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- lloyds30 popup -->
+		<div data-role="popup" id="lloyds30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=LLOY.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- lloydsyear popup -->
+		<div data-role="popup" id="lloydsyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=LLOY.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- riotintoreal popup -->
+		<div data-role="popup" id="riotintoreal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=RIO.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- riotinto30 popup -->
+		<div data-role="popup" id="riotinto30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=RIO.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- riotintoyear popup -->
+		<div data-role="popup" id="riotintoyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=RIO.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- vodafonereal popup -->
+		<div data-role="popup" id="vodafonereal" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=VOD.L&duration=1&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- vodafone30 popup -->
+		<div data-role="popup" id="vodafone30" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=VOD.L&duration=30&showLastClose=1&headerType=quote" />
+		</div>
+		<!-- vodafoneyear popup -->
+		<div data-role="popup" id="vodafoneyear" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=420&height=280&symbol=VOD.L&duration=365&showLastClose=1&headerType=quote" />
+		</div>
+            </div>
+        </div> <!-- stockspage vége -->
+        <div data-role="page" id="calcpage">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="g">
+                <h1>Kalkulátorok</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="g">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <div data-role="controlgroup">
+                    <a data-role="button" href="#calc1" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Valutaváltó</a>
+                    <a data-role="button" href="#calc2" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Technikai analízis</a>
+                    <a data-role="button" href="#calc3" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Fibonacci Kalkulátor</a>
+                    <a data-role="button" href="#calc4" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">PIP value Kalkulátor</a>
+                    <a data-role="button" href="#calc5" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Mozgó átlag</a>
+                    <a data-role="button" href="#calc6" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Margin Kalkulátor</a>
+                    <a data-role="button" href="#calc7" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Carry Trade Kalkulátor</a>
+                    <a data-role="button" href="#calc8" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Pivot Point Kalkulátor</a>
+                    <a data-role="button" href="#calc9" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Profit Kalkulátor</a>
+                    <a data-role="button" href="#calc10" data-rel="dialog" data-transition="flip" data-mini="true"
+                    data-theme="g">Spread Cost Kalkulátor</a>
+					</div>
+            </div>
+        </div> <!-- calcpage vége -->
+        <div data-role="page" id="agrarpage">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="f">
+                <h1>Agrárpiac</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="f">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <img src="http://www.finviz.com/fut_image.ashx?kc.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?cc.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?jo.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zr.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?sb.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zw.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zc.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zo.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zm.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zs.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?zl.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?lh.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?fc.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?lc.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?lb.png&amp;rev=.jpg" width="32%">
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Coffee</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?kc.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=KC&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Cocoa</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?cc.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=CC&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Orange Juice</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?jo.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=JO&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Rough Rice</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zr.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZR&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Sugar</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?sb.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=SB&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Wheat</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zw.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZW&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Corn</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zc.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZC&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Oats</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zo.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZO&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Soybean Meal</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zm.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZM&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Soybeans</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zs.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZS&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Soybean Oil</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?zl.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=ZL&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Lean Hogs</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?lh.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=LH&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Feeder Cattle</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?fc.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=FC&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Live Cattle</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?lc.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=LC&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="f">
+                    <h1>Lumber</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?lb.png&amp;rev=.jpg" width="50%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=LB&amp;p=m5&amp;s=m" width="100%">
+                </div>
+            </div>
+        </div> <!-- agrarpage vége -->
+        <div data-role="page" id="arupage">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="d">
+                <h1>Árupiac</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="d">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <img src="http://www.finviz.com/fut_image.ashx?gc.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?si.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?cl.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?ng.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?ho.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?hg.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?pl.png&amp;rev=.jpg" width="32%">
+                    <img src="http://www.finviz.com/fut_image.ashx?pa.png&amp;rev=.jpg" width="32%">
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Gold</h1>
+                    <img src="http://www.chartseeker.com/images/AU-24HR-LG.png" width="100%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=GC&p=m5&s=m" width="100%">
+                    <img src="http://www.kitco.com/images/live/gold.gif" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Silver</h1>
+                    <img src="http://www.chartseeker.com/images/AG-24HR-LG.png" width="100%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=SI&p=m5&s=m" width="100%">
+                    <img src="http://www.kitco.com/images/live/silver.gif" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Crude OIL</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?cl.png&amp;rev=.jpg" width="60%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=CL&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Natural GAS</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?ng.png&amp;rev=.jpg" width="60%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=NG&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Heating OIL</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?ho.png&amp;rev=.jpg" width="60%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=HO&amp;p=m5&amp;s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Copper</h1>
+                    <img src="http://www.finviz.com/fut_image.ashx?hg.png&amp;rev=.jpg" width="60%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=HG&p=m5&s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Platinum</h1>
+                    <img src="http://www.chartseeker.com/images/PT-24HR-LG.png" width="100%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=PL&p=m5&s=m" width="100%">
+                </div>
+                <div data-role="collapsible" data-mini="true" data-theme="d">
+                    <h1>Palladium</h1>
+                    <img src="http://www.chartseeker.com/images/PD-24HR-LG.png" width="100%">
+                    <img src="http://www.finviz.com/fut_chart.ashx?t=PA&p=m5&s=m" width="100%">
+                </div>
+            </div>
+        </div> <!-- arupage vége -->
+        <div data-role="page" id="etfpage">
+            <div data-role="content">
+			<div data-role="header" data-position="fixed" data-theme="b">
+                <h1>ETF-ek</h1>
+                <a data-role="button" href="#page1" data-rel="page" data-icon="home">Home</a>
+                <a data-role="button" class="ui-btn-right" href="#menu" data-rel="popup" data-icon="grid" data-iconpos="right">Menü</a>
+            </div>
+            <div data-role="popup" id="menu" data-theme="none">
+			<ul data-role="listview" data-theme="b">
+                <li><a href="#forexpage" data-rel="page">FOREX</a></li>
+                <li><a href="#indexpage" data-rel="page">INDEX</a></li>
+                <li><a href="#stockpage" data-rel="page">Részvények</a></li>
+                <li><a href="#arupage" data-rel="page">Árupiac</a></li>
+                <li><a href="#agrarpage" data-rel="page">Agrárpiac</a></li>
+                <li><a href="#etfpage" data-rel="page">ETF</a></li>
+                <li><a href="#calcpage" data-rel="page">Kalkulátorok</a></li>
+            </ul>
+            </div>
+                    <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#djietf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">DJI</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#energyetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">Energy</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#financeetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">Financial</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#hcareetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">HealthCare</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#industryetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">Industrials</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#telecometf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">Telecoms</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#expetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">BSE Oil&Gas</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#pharmaetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">Pharmaceutical</a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a data-role="button" href="#technoetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">Technology</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-role="button" href="#utilsetf" data-rel="popup" data-transition="flip" data-mini="true" data-theme="b">UTILITIES</a>
+                    </div>
+                </div>
+                <a data-role="button" data-rel="popup" href="#etfinfo" data-transition="pop" data-icon="info" data-mini="true"
+                data-theme="a" data-inline="true">ETF info</a>
+		<!-- etfinfo popup -->
+		<div data-role="popup" id="etfinfo" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <p>Az ETF (Exchange Traded Fund) tőzsdén kereskedett befektetési alapot jelent. Vagyis ez egy olyan befektetési alap, melynek befektetési jegyeit a tőzsdén úgy adhatjuk-vehetjük, mint a részvényeket. Ennek köszönhetően a hagyományos befektetési alapokkal ellentétben nem csak a nap végén a nap végi záró árfolyamokból számolt nettó eszközértéken kereskedhetünk velük, hanem a nap folyamán bármikor a tőzsdei nyitvatartás alatt.</p>
+		</div>
+		<!-- djietf popup -->
+		<div data-role="popup" id="djietf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://www.reuters.wallst.com/enhancements/chartapi/index_chart_api.asp?symbol=.DJI&headerType=quote&width=540&height=300&duration=5" />
+		</div>
+		<!-- energyetf popup -->
+		<div data-role="popup" id="energyetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUENE&duration=1&showLastClose=1&headerType=quote?rand=1382617797190" />
+		</div>
+		<!-- financeetf popup -->
+		<div data-role="popup" id="financeetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUFIN&duration=1&showLastClose=1&headerType=quote?rand=1382617797190" />
+		</div>
+		<!-- hcareetf popup -->
+		<div data-role="popup" id="hcareetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUHLC&duration=1&showLastClose=1&headerType=quote?rand=1382617797190" />
+		</div>
+		<!-- industryetf popup -->
+		<div data-role="popup" id="industryetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUIND&duration=1&showLastClose=1&headerType=quote?rand=1382618397192" />
+		</div>
+		<!-- telecometf popup -->
+		<div data-role="popup" id="telecometf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUCOM&duration=1&showLastClose=1&headerType=quote?rand=1382618397192" />
+		</div>
+		<!-- expetf popup -->
+		<div data-role="popup" id="expetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUMAT&duration=1&showLastClose=1&headerType=quote?rand=1382618397192" />
+		</div>
+		<!-- pharmaetf popup -->
+		<div data-role="popup" id="pharmaetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://chart.finance.yahoo.com/z?s=PPH&t=1y&q=&l=&z=l&a=v&p=s&lang=en-US&region=US" />
+		</div>
+		<!-- technoetf popup -->
+		<div data-role="popup" id="technoetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUTEC&duration=1&showLastClose=1&headerType=quote?rand=1382618397192" />
+		</div>
+		<!-- utilsetf popup -->
+		<div data-role="popup" id="utilsetf" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="http://charts.reuters.com/reuters/enhancements/chartapi/chart_api.asp?width=450&height=330&symbol=.TRXFLDG7PUUTL&duration=1&showLastClose=1&headerType=quote?rand=1382618397192" />
+		</div>
+            </div>
+        </div> <!-- etfpage vége -->
+        <div data-role="dialog" id="curcross">
+            <div data-role="header">
+                <h1>Devizakeresztek</h1>
+                <a data-role="button" href="#forexpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <iframe frameborder="0" scrolling="auto" height="652" width="auto" allowtransparency="true" marginwidth="0" marginheight="0" src="http://fxrates.investing.com/index_single_crosses.php?currency=12&header-text-color=%23FFFFFF&curr-name-color=%23509eeb&inner-text-color=%23c2c2c2&green-text-color=%232A8215&green-background=%232b7539&red-text-color=%23DC0001&red-background=%23b85353&inner-border-color=%23aba9a9&border-color=%23cbcbcb&bg1=%232b2b2b&bg2=%231c1b1b&bid=show&ask=show&last=hide&open=hide&high=hide&low=hide&change=hide&change_in_percents=show&last_update=show"></iframe><br /><div style="width:339"><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Forex Quotes are powered by<a href="http://www.Investing.com/" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link"> Investing.com</a>.</span></span></div>
+            </div>
+        </div> <!-- curcross vége -->
+        <div data-role="dialog" id="buysell">
+            <div data-role="header">
+                <h1>Vétel Eladás</h1>
+                <a data-role="button" href="#forexpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe src ="http://www.aaafx.com/widget/rates.aspx?num=30&amp;link=aaafx.com/?aid=9510" width="300" height="410"></iframe></p>
+            </div>
+        </div> <!-- buysell vége -->
+        <div data-role="dialog" id="losewin">
+            <div data-role="header">
+                <h1>Vétel Eladás</h1>
+                <a data-role="button" href="#forexpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <script type="text/javascript">DukascopyApplet = {"type":"movers_and_shakers","params":{"showHeader":false,"showVideoLink":false,"tableBorderColor":"#676767","defaultPeriod":0,"entryCount":8,"width":"66%","height":"100%","adv":"popup"}};</script><script type="text/javascript" src="//freeserv.dukascopy.com/2.0/core.js"></script>
+            </div>
+        </div> <!-- losewin vége -->
+        <div data-role="dialog" id="calendar">
+            <div data-role="header">
+                <h1>Naptár</h1>
+                <a data-role="button" href="#page1" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe src="http://ec.forexprostools.com?ecoDayBackground=%23424242&defaultFont=%23575757&innerBorderColor=%23424242&ecoDayFontColor=%23e0dddd&columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&features=datepicker,timezone&countries=25,54,32,70,6,37,113,55,72,22,17,39,93,14,48,10,35,7,21,43,60,53,100,56,36,90,112,110,11,26,12,4,5&calType=week&timeZone=57&lang=1" width="636" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy"><span style="font-size: 11px;color: #333333;text-decoration: none;">Real Time <a href="http://www.Investing.com/economic-calendar" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Economic Calendar</a> provided by Investing.com</span></div></p>
+            </div>
+        </div> <!-- calendar vége -->
+        <div data-role="dialog" id="news">
+            <div data-role="header">
+                <h1>Hírolvasó</h1>
+                <a data-role="button" href="#page1" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <!-- start sw-rss-feed code --> 
+<script type="text/javascript"> 
+<!-- 
+rssfeed_url = new Array(); 
+rssfeed_url[0]="http://www.portfolio.hu/rss/cikkek/all.xml"; rssfeed_url[1]="http://hvg.hu/rss/gazdasag";  
+rssfeed_frame_width="100%"; 
+rssfeed_frame_height="1000"; 
+rssfeed_scroll="on"; 
+rssfeed_scroll_step="6"; 
+rssfeed_scroll_bar="on"; 
+rssfeed_target="_blank"; 
+rssfeed_font_size="14"; 
+rssfeed_font_face=""; 
+rssfeed_border="on"; 
+rssfeed_css_url=""; 
+rssfeed_title="on"; 
+rssfeed_title_name="Portfolio.hu és HVG.hu Gazdasági Újság"; 
+rssfeed_title_bgcolor="#000"; 
+rssfeed_title_color="#ffcc00"; 
+rssfeed_title_bgimage="http://"; 
+rssfeed_footer="off"; 
+rssfeed_footer_name="rss feed"; 
+rssfeed_footer_bgcolor="#fff"; 
+rssfeed_footer_color="#333"; 
+rssfeed_footer_bgimage="http://"; 
+rssfeed_item_title_length="80"; 
+rssfeed_item_title_color="#ffcc00"; 
+rssfeed_item_bgcolor="#434343"; 
+rssfeed_item_bgimage="http://"; 
+rssfeed_item_border_bottom="on"; 
+rssfeed_item_source_icon="off"; 
+rssfeed_item_date="on"; 
+rssfeed_item_description="on"; 
+rssfeed_item_description_length="120"; 
+rssfeed_item_description_color="#fff"; 
+rssfeed_item_description_link_color="#333"; 
+rssfeed_item_description_tag="on"; 
+rssfeed_no_items="0"; 
+rssfeed_cache = "80b3fdc853e4fbc62ad9b6bd95eea652"; 
+//--> 
+</script> 
+<script type="text/javascript" src="http://feed.surfing-waves.com/js/rss-feed.js"></script> 
+<!-- end sw-rss-feed code -->
+            </div>
+        </div> <!-- news vége -->
+        <!-- valutaváltó popup -->
+		<div data-role="dialog" id="calc1">
+            <div data-role="header">
+                <h6>Valutaváltó</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe id="tmccc" width="251px" height="351px" src="http://themoneyconverter.com/CurrencyConverter.aspx?tab=0&amp;from=USD&amp;to=EUR&amp;amount=1&amp;bg=333333&amp;logo=http://tales.appinvent.hu/wp-content/uploads/2013/11/stockexlogo.png" scrolling="auto" frameborder="0" marginwidth="0" marginheight="0" style="background-color: rgb(51, 51, 51);"></iframe></p>
+            </div>
+        </div>
+		<!-- techsummery popup -->
+		<div data-role="dialog" id="calc2">
+            <div data-role="header">
+                <h6>Technikai analízis</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe src="http://tsw.forexprostools.com?tabsLine=%230a0a0a&forex=1,2,9,10,90,117,91&commodities=8830,8836,8831,8849,8833,8862,8832&indices=169,20,166,172,27,167,178&stocks=6408,6369,243,267,7888,284,252" width="317" height="467"></iframe><div class="poweredBy"><span style="font-size: 11px;color: #333333;text-decoration: none;">Technical Summary Widget Powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span></div></p>
+            </div>
+        </div>
+		<!-- fibonacci popup -->
+		<div data-role="dialog" id="calc3">
+            <div data-role="header">
+                <h6>Fibonacci kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe frameborder="0" scrolling="yes" height="600" width="545" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.investing.com/fibonacci-calculator/index.php"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Fibonacci Calculator is powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span></span></div></p>
+            </div>
+        </div>
+		<!-- pipcalc popup -->
+		<div data-role="dialog" id="calc4">
+            <div data-role="header">
+                <h6>PIP value kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe frameborder="0" scrolling="auto" height="640" width="545" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.investing.com/pip-calculator/index.php?acc=12"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Pip Calculator is powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span></span></div></p>
+            </div>
+        </div>
+		<!-- movingavg popup -->
+		<div data-role="dialog" id="calc5">
+            <div data-role="header">
+                <h6>Mozgó átlag</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe src="http://easycalculation.com/finance/embedded_sma-calculator.php" width="400" 
+height="500" frameborder="0"></iframe></p>
+            </div>
+        </div>
+		<!-- margincalc popup -->
+		<div data-role="dialog" id="calc6">
+            <div data-role="header">
+                <h6>Margin kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe frameborder="0" scrolling="auto" height="425" width="430" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.investing.com/margin-calculator/index.php?acc=12&pair=1"></iframe><br /><div style="width:450"><a href="http://www.investing.com" target="_blank"><img src="http://c1802182.cdn.cloudfiles.rackspacecloud.com/forexpros_en_logo.png" alt="Investing.com" title="Investing.com" style="float:left" /></a><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Margin Calculator is powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span></span></div></p>
+            </div>
+        </div>
+		<!-- carrytrade popup -->
+		<div data-role="dialog" id="calc7">
+            <div data-role="header">
+                <h6>Carry Trade kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe frameborder="0" scrolling="auto" height="525" width="430" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.investing.com/carry-trade-calculator/index.php?acc=12&pair=1"></iframe><br /><div style="width:450"><img src="http://c1802182.cdn.cloudfiles.rackspacecloud.com/forexpros_en_logo.png" alt="ForexPros" title="ForexPros" style="float:left" /><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Carry Trade Calculator Powered By <a href="http://www.Investing.com" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a> - The Forex Portal</span></span></div></p>
+            </div>
+        </div>
+		<!-- pivotpoint popup -->
+		<div data-role="dialog" id="calc8">
+            <div data-role="header">
+                <h6>Pivot Point kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe frameborder="0" scrolling="auto" height="600" width="543" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.investing.com/pivot-calculator/index.php"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Pivot Calculator is powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span></span></div></p>
+            </div>
+        </div>
+		<!-- profitcalc popup -->
+		<div data-role="dialog" id="calc9">
+            <div data-role="header">
+                <h6>Profit kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe frameborder="0" scrolling="auto" height="450" width="420" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.investing.com/profit-calculator/index.php?acc=12&pair=1"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">The Profit Calculator is powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a>.</span></span></div></p>
+            </div>
+        </div>
+		<!-- spreadcost popup -->
+		<div data-role="dialog" id="calc10">
+            <div data-role="header">
+                <h6>Spread cost kalkulátor</h6>
+                <a data-role="button" href="#calcpage" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><!--FX Empire Forex Tools BEGIN-->                    
+<iframe width="630" height="700" frameborder="0" scrolling="no" allowtransparency="true" src="http://tools.fxempire.com/spread-cost-calculator.php?trading_activity=5&deals=day&avg_deal_leverage=100&account_equity=10000&past_return=20&current_spread=3&new_spread=2&headline_color=082f60&text_color=082f60&bg_color=f5f5f5&frame_color=ccc&client_slogan=StockExShadow.com"></iframe>                              
+<div id="fxempire_link" style="width:630px;font-size: 11px;">                        
+The Free Charts are Powered by <a style="text-decoration: underline;" target="_blank" href="http://www.fxempire.com">FXEmpire.com</a> - Your Leading Financial Portal</div>                        
+<!--FX Empire Forex Tools END--></p>
+            </div>
+        </div> <!-- Kalkulátor dialogs vége -->
+        <div data-role="dialog" id="ducascopy">
+            <div data-role="header">
+                <h6>Ducascopy TV</h6>
+                <a data-role="button" href="#page1" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><script type="text/javascript">
+	var fs2_applet = {width:350,rows:8,lang:"en",ibrefid:""};
+</script>
+<script type="text/javascript" src="http://freeserv.dukascopy.com/tv/f/js/streamvideoservice.js"></script></p>
+            </div>
+        </div> <!-- Ducascopy TV dialog vége -->
+        <div data-role="dialog" id="alpari">
+            <div data-role="header">
+                <h6>Ducascopy TV</h6>
+                <a data-role="button" href="#page1" data-icon="back">Vissza</a>
+            </div>
+            <div data-role="content">
+            <p align="center"><iframe width="420" height="315" src="http://www.youtube.com/embed/U98yB-fiCfs?feature=player_embedded" frameborder="0" allowfullscreen></iframe></p>
+            </div>
+        </div>
+    </body>
+
+</html>
