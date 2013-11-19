@@ -1,0 +1,24 @@
+{
+    "version": "1.0",
+    "name": "StockExShadow",
+    "description": "Realtime gazdasági és tőkepiaci információk a nagyvilágból, egy csokorban.",
+    "launch_path": "/indexfos.html",
+    "icons": {
+        "256": "/icons/icon-256.png",
+        "128": "/icons/icon-128.png",
+        "32": "/icons/icon-32.png",
+        "60": "/icons/icon-60.png",
+        "90": "/icons/icon-90.png",
+        "120": "/icons/icon-120.png"
+    },
+    "developer": {
+        "name": "Mezo Laszlo",
+        "url": "http://appinvent.hu"
+    },
+    "installs_allowed_from": [
+    "*"
+  ],
+    "chrome": { "navigation": true },
+    "fullscreen": "true",
+    "default_locale": "hu"
+}
